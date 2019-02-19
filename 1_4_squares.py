@@ -6,7 +6,8 @@ Created on Jan 8, 2019
 '''
 
 def main():
-  print('Hello World')
+  x = float(input('Please enter a number: '))
+  print('The square of ', x, ' is ', x*x)
 
 if __name__ == '__main__':
   main()
