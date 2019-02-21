@@ -18,6 +18,9 @@ def main():
     number4 = read_number_loop('Enter a number? ')
     print(number4, ' squared is ', number4**2)
 
+    number5 = read_number_low_high('Enter a number between 1 and 10? ', 1, 10)
+    print(number5, ' squared is ', number5**2)
+
 def read_number():
     line = input('Enter a number? ')
     return int(line)
@@ -38,6 +41,15 @@ def read_number_loop(prompt):
         line = input(prompt).strip()
         if line.isdigit():
             return int(line)
+
+def read_number_low_high(prompt, low, high):
+    while True:
+        line = input(prompt).strip()
+        if line.isdigit():
+            number = int(line)
+            if low <= number <= high:
+                return number
+            print('Number must be between '+str(low)+' and '+str(high))
 
 if __name__ == "__main__":
     main()
